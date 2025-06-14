@@ -54,7 +54,7 @@ def main():
 
     min_EV = driver.find_element(By.NAME, 'ctl00$ctl00$ContentPlaceHolderMain$ContentPlaceHolderRight$TextBoxMinimumEVPercentage')
     min_EV.clear()
-    min_EV.send_keys('1%') 
+    min_EV.send_keys('2%') 
 
     bankroll = driver.find_element(By.NAME, 'ctl00$ctl00$ContentPlaceHolderMain$ContentPlaceHolderRight$TextBoxKellyBankroll')
     bankroll.clear()
@@ -75,10 +75,10 @@ def main():
     driver.get('https://crazyninjaodds.com/site/tools/positive-ev.aspx')
 
     minOdds = wait.until(EC.element_to_be_clickable(driver.find_element(By.NAME, 'ctl00$ctl00$ContentPlaceHolderMain$ContentPlaceHolderRight$WebUserControl_FilterMinimumOdds$TextBoxMinimumOdds')))
-    minOdds.send_keys('-150') #150
+    minOdds.send_keys('-200') #150
 
     maxOdds = wait.until(EC.element_to_be_clickable(driver.find_element(By.NAME, 'ctl00$ctl00$ContentPlaceHolderMain$ContentPlaceHolderRight$WebUserControl_FilterMaximumOdds$TextBoxMaximumOdds')))
-    maxOdds.send_keys('150') # 150
+    maxOdds.send_keys('500') # 150
 
     startIn = wait.until(EC.element_to_be_clickable(driver.find_element(By.NAME, 'ctl00$ctl00$ContentPlaceHolderMain$ContentPlaceHolderRight$WebUserControl_FilterMaximumDateHours$TextBoxMaximumDateHours')))
     startIn.send_keys('5')
